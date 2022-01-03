@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    container_name: web
+    restart: always
+    build: ./primaa_test_front
+    ports:
+      - "80:80"
+  node:
+    container_name: node
+    restart: always
+    build: ./primaa_test_back
+    ports:
+      - "3000:3000"
